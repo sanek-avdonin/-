@@ -15,10 +15,6 @@
         "provider": "google",
         "mode": "api_key"
       },
-      "synthetic:default": {
-        "provider": "synthetic",
-        "mode": "none"
-      },
       "opencode:default": {
         "provider": "opencode",
         "mode": "api_key"
@@ -28,7 +24,7 @@
   "models": {
     "mode": "merge",
     "providers": {
-      "synthetic": {
+      "opencode": {
         "baseUrl": "http://127.0.0.1:11434",
         "api": "openai",
         "models": [
@@ -56,10 +52,10 @@
     "defaults": {
       "model": {
         "fallbacks": [],
-        "primary": "synthetic/qwen2.5:7b"
+        "primary": "opencode/qwen2.5:7b"
       },
       "models": {
-        "synthetic/qwen2.5:7b": {}
+        "opencode/qwen2.5:7b": {}
       },
       "compaction": {
         "mode": "safeguard"
