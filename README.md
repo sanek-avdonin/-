@@ -32,3 +32,19 @@ models:
 
 Restart Moltbot after the change. If you have custom routing or costs, re-run
 onboarding to rebuild the catalog with defaults.
+
+## Troubleshooting: Unknown model
+
+If you see:
+
+```
+Error: Unknown model: ollama/qwen2.5:7b
+```
+
+It means Moltbot is pointing at a model that your local Ollama service does
+not have installed. Fix it by doing one of the following:
+
+- Install the model in Ollama (for example, `ollama pull qwen2.5:7b`), or
+- Update your Moltbot config to a model that appears in `ollama list`.
+
+After updating, restart Moltbot so the new model choice is picked up.
